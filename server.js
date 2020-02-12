@@ -6,7 +6,7 @@ app.use(express.static('dist/pressure-swing-absorption'));
 // app.use(express.static(__dirname+'/dist'));
 app.get('/*', function(request, response) {
   // response.sendFile('absolutePathToYour/htmlPage.html');
-  response.sendFile('dist/pressure-swing-absorption/hello.html', {
+  response.sendFile('dist/pressure-swing-absorption/index.html', {
     root: __dirname
   });
 });
