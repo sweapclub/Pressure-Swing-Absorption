@@ -2,9 +2,9 @@ const http = require('http');
 const express = require('express');
 const app = new express();
 
-app.use(express.static(__dirname+'dist/pressure-swing-absorption'));
+app.use(express.static('dist/pressure-swing-absorption'));
 // app.use(express.static(__dirname+'/dist'));
-app.get('/', function(request, response) {
+app.get('/*', function(request, response) {
   // response.sendFile('absolutePathToYour/htmlPage.html');
   response.sendFile('dist/pressure-swing-absorption/hello.html', {
     root: __dirname
