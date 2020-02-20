@@ -2,11 +2,11 @@ const http = require('http');
 const express = require('express');
 const app = new express();
 
-app.use(express.static('dist/pressure-swing-absorption'));
+app.use(express.static('dist/app'));
 // app.use(express.static(__dirname+'/dist'));
-app.get('/psa/', function(request, response) {
+app.get('/*', function(request, response) {
   // response.sendFile('absolutePathToYour/htmlPage.html');
-  response.sendFile('dist/pressure-swing-absorption/index.html', {
+  response.sendFile('dist/app/index.html', {
     root: __dirname
   });
 });
